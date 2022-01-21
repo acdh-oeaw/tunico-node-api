@@ -13,7 +13,7 @@
             ],
 //            "env": {"NOSKE_BONITO": "https://voice-noske.acdh-dev.oeaw.ac.at/bonito/run.cgi"},
             "env": {
-                "NOSKE_BONITO": "http://localhost:8080/bonito/run.cgi",
+                "NOSKE_BONITO": "http://localhost:4000/bonito/run.cgi",
                 "CORPNAME": "tunico"
             },
             "program": "${workspaceFolder}/app.js"
