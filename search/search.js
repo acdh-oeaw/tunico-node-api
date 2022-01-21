@@ -3,9 +3,11 @@ const http = require('http');
 const { toCQL } = require("./voice-to-cql")
 const { performance } = require('perf_hooks');
 const {
-  NOSKE_BONITO
+  NOSKE_BONITO,
+  CORPNAME
 } = process.env
 const noske_bonito = NOSKE_BONITO || 'http://localhost:4000/bonito/run.cgi'
+const corpname = CORPNAME || 'voice'
 
 class search {
   constructor(xmlData) {
@@ -22,7 +24,7 @@ class search {
     var q = (req.query.q || ''),
         cql = q.match(/^["]/) ? q : this.toCQLifVoice(q),
         queryString = `${cql.replace(/\+/g, '%2B').replace(/&/g, '%26').replace(/ /g, '+')}`,
-        backendRequest = `${noske_bonito}/first?corpname=voice&` +
+        backendRequest = `${noske_bonito}/first?corpname=${corpname}&` +
         `queryselector=cqlrow&cql=${queryString}&default_attr=word` +
     `&attrs=wid&kwicleftctx=-1&kwicrightctx=0&refs=u.id,doc.id&pagesize=100000`
     console.log(`NoSkE request: ${backendRequest}`)

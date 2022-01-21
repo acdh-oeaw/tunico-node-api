@@ -5,7 +5,7 @@ const createToken = chevrotain.createToken
 const tokenVocabulary = {}
 
 //regexp-to-ast.js does not support \p{Ll} or \p{Lu} see chevrotain issues 777
-const Word = createToken({ name: "Word", pattern: /(([([]?\^?(\|?[-._@'0-9a-zäöüß](?!:)(?![a-z]:)([+*?]|\{[0-9],?([0-9]+)?\})?)+([\])]([+*?]|\{[0-9],?([0-9]+)?\})?)?)|\\[wd]([+*?]|\{[0-9],?([0-9]+)?\})?)+/}) // [._@0-9a-zäöüß\])*?+]
+const Word = createToken({ name: "Word", pattern: /(([([]?\^?(\|?[-._@'0-9a-zäöüßḍēṛṯẓūīōāšḏṭǧḥžḷəṣḏ̣ʕġḅṃʔ}](?!:)(?![a-z]:)([+*?]|\{[0-9],?([0-9]+)?\})?)+([\])]([+*?]|\{[0-9],?([0-9]+)?\})?)?)|\\[wd]([+*?]|\{[0-9],?([0-9]+)?\})?)+/}) // [._@0-9a-zäöüß\])*?+]
 const Pos = createToken({ name: "Pos", pattern: /(([([]?\^?(\|?f?[-.A-Z]([+*?]|\{[0-9],?([0-9]+)?\})?)+([\])]([+*?]|\{[0-9],?([0-9]+)?\})?)?)|\\[wd]([+*?]|\{[0-9],?([0-9]+)?\})?)+/}) // [.A-Z\])*?+]
 const Tag = createToken({ name: "Tag", pattern: /<[^>]+>/})
 const LParen = createToken({ name: "LParen", pattern: /\(/})

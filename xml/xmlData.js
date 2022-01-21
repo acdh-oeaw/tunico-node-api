@@ -86,6 +86,9 @@ class XMLData {
               if (node.name === 'body') {
                 // console.log(node, parser.startTagPosition - 1, data.substr(parser.startTagPosition - 1, 20))
                 aFileObj.bodyStart = parser.startTagPosition - 1
+                if (node.attributes && node.attributes['cr:resource-pid']) {
+                  aFileObj.id = node.attributes['cr:resource-pid']
+                }
               }
               if (node.name === 'u' && node.attributes && node.attributes['xml:id']) {
                 // console.log(node, parser.startTagPosition, data.substr(parser.startTagPosition - 1, 20))

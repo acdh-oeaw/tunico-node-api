@@ -4,6 +4,10 @@ test('simple phrase "just a test"', () => {
     expect(toCQL("just a test")).toBe('[word="just"] [word="_.*"]* [word="a"] [word="_.*"]* [word="test"]')
 })
 
+test('ʔā ʕomplēx ūnīcoḏ̣e ēxāṃpḷē', () => {
+    expect(toCQL("ʔā ʕomplēx ūnīcoḏ̣e ēxāṃpḷē")).toBe('[word="ʔā"] [word="_.*"]* [word="ʕomplēx"] [word="_.*"]* [word="ūnīcoḏ̣e"] [word="_.*"]* [word="ēxāṃpḷē"]')
+})
+
 test('explicit word test "w:i w:am"', () => {
     expect(toCQL("w:i w:am")).toBe('[word="i"] [word="_.*"]* [word="am"]')
 })
