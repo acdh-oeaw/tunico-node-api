@@ -17,11 +17,11 @@ function gitVersion() {
 async function downloadData() {
   logger.info('Downloading VOICE XML data')
   return collection_download({
-    url: 'https://arche-curation.acdh-dev.oeaw.ac.at/api/568138',
+    url: 'https://arche.acdh.oeaw.ac.at/api/171833',
     targetDir: "xmlfiles",
     recursive: true,
     maxDepth: -1,
-    skipUrl: ['https://arche-curation.acdh-dev.oeaw.ac.at/api/574659'], // that is the logo tiff
+    skipUrl: ['https://arche.acdh.oeaw.ac.at/api/171860'], // that is the logo tiff
     downloadFilesMime: /^application\/xml/,
     logger
   })

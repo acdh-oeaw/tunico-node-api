@@ -21,8 +21,8 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": "14.x",
-    "npm": "7.23.x"
+    "node": "16.x",
+    "npm": "8.5.x"
   },
   "scripts": {
     "build": "node DependencyLicenseGenerator.js > dependency-license-report.html && node node_modules/gulp/bin/gulp.js",
@@ -35,20 +35,20 @@
     "AutoDevOps Settungs": "POSTGRES_ENABLED=false #we don't use a DB so don't prepare it"
   },
   "dependencies": {
-    "chevrotain": "^9.0.2",
+    "chevrotain": "^10.1.2",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-jsdoc-swagger": "^1.6.6",
+    "express": "^4.17.3",
+    "express-jsdoc-swagger": "^1.6.7",
     "sax": "^1.2.4"
   },
   "devDependencies": {
+    "async": "^3.2.3",
     "del": "^6.0.0",
     "git-describe": "^4.1.0",
     "gulp": "^4.0.2",
     "gulp-token-replace": "^1.1.5",
-    "gulp-untar": "0.0.8",
-    "jest": "^26.6.3",
-    "license-report": "^4.5.0",
+    "jest": "^27.5.1",
+    "license-report": "^5.0.2",
     "vinyl-source-stream": "^2.0.0"
   }
 }

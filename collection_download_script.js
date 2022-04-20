@@ -37,7 +37,7 @@ module.exports = {
 }
 if (require.main === module) {
     try {
-        main(parseArgs(["https://arche-curation.acdh-dev.oeaw.ac.at/api/568138", "--recursive"], argsDefs));
+        main(parseArgs(["https://arche.acdh.oeaw.ac.at/api/17183", "--recursive", "--skipUrl", "https://arche.acdh.oeaw.ac.at/api/171860"], argsDefs));
     } catch (err) {
         /** @type {Error} */
         const e = err;
