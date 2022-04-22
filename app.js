@@ -19,7 +19,7 @@ var app = express();
 expressJSDocSwagger(app)({
    info: {
     version: "{{semverString}}",
-     title: "VOICE 3.0 backend API",
+     title: "TUNICO 2.0 backend API",
      description: "Backend API providing XML parsing utterance level XML access as well as search transformation to actual CQL.",
      license: {
        name: 'MIT',

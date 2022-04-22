@@ -15,7 +15,7 @@ function gitVersion() {
   }
 
 async function downloadData() {
-  logger.info('Downloading VOICE XML data')
+  logger.info('Downloading TUNICO XML data')
   return collection_download({
     url: 'https://arche.acdh.oeaw.ac.at/api/171833',
     targetDir: "xmlfiles",

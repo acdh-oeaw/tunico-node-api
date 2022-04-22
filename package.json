@@ -1,6 +1,6 @@
 {
-  "name": "voice-clariah-node-api",
-  "version": "1.0.2",
+  "name": "tunico-clariah-node-api",
+  "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "author": {

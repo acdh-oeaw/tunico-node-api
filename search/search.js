@@ -7,7 +7,7 @@ const {
   CORPNAME
 } = process.env
 const noske_bonito = NOSKE_BONITO || 'http://localhost:4000/bonito/run.cgi'
-const corpname = CORPNAME || 'voice'
+const corpname = CORPNAME || 'tunico'
 
 class search {
   constructor(xmlData) {
